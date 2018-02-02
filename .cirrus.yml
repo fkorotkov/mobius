@@ -1,0 +1,7 @@
+container:
+  image: cirrusci/android-sdk:26
+
+check_task:
+  check_script:
+    - ./gradlew check jacocoTestReport
+    - curl -s https://codecov.io/bash | bash
